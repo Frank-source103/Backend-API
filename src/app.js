@@ -1,5 +1,6 @@
 const express = require("express");
 
+const cors = require("cors");
 const studentRoutes = require("./routes/student.routes");
 const courseRoutes = require("./routes/course.routes");
 const resultRoutes = require("./routes/result.routes");
@@ -9,6 +10,7 @@ const errorHandler = require("./middleware/errorHandler");
 const app = express();
 
 // Lets Express read JSON sent in request bodies
+app.use(cors());
 app.use(express.json());
 
 // Quick check that the server is alive
