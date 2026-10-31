@@ -10,7 +10,7 @@ const errorHandler = require("./middleware/errorHandler");
 const app = express();
 
 // Lets Express read JSON sent in request bodies 
-app.use(cors({ origin: "https://vercel.com/franks-projects-91537dac/srm-frontend2/FD8DfVD6MQWaAihbVKvRU9jcANaY" }));
+app.use(cors({ origin: "https://srm-frontend2.vercel.app" }));
 app.use(express.json());
 
 // Quick check that the server is alive
