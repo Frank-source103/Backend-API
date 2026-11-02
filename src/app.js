@@ -19,6 +19,8 @@ app.get("/api/v1/health", (req, res) => {
   res.json({ success: true, message: "SRM API is running" });
 });
 
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1", guardWrites);
 app.use("/api/v1/students", studentRoutes);
 app.use("/api/v1/courses", courseRoutes);
 app.use("/api/v1/results", resultRoutes);
