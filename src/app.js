@@ -6,6 +6,7 @@ const courseRoutes = require("./routes/course.routes");
 const resultRoutes = require("./routes/result.routes");
 const notFound = require("./middleware/notFound");
 const errorHandler = require("./middleware/errorHandler");
+const { authRouter, guardWrites } = require("./authGuard");
 
 const app = express();
 
